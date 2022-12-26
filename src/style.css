@@ -1,0 +1,237 @@
+
+@font-face {
+  font-family: 'LatoItalic';
+  src : url('../fonts/Lato-Italic.ttf');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Lato';
+  src : url('../fonts/Lato-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+/* outline: 1px red solid; */
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root{
+font-size: 62.5%;
+/* Primary color - a rich, warm shade of brown */
+--caramel-primary: #A15E3E;
+/* Secondary colors - lighter shades of brown and amber */
+--caramel-secondary-1: #C47951;
+--caramel-secondary-2: #D99063;
+--caramel-secondary-3: #F1B37E;
+
+/* Accent colors - shades of orange and red */
+--caramel-accent-1: #FF7F49;
+--caramel-accent-2: #FFA07A;
+--caramel-accent-3: #FFA07A;
+
+/* Text colors - black or white for high contrast */
+--caramel-text-1: #000000;
+--caramel-text-2: #FFFFFF;
+  
+--header-bg-color: rgba(0, 0, 0, 0.9);
+--H1-FS: clamp(3.2rem, 6vw, 6.4rem);
+--H1-FF: "LatoItalic", sans-serif;
+--H1-padding: 2rem;
+
+--nav-FS: clamp(2.4rem, 4vw, 4.2rem);
+--nav-FF: "LatoItalic", sans-serif;
+--nav-item-bg-color: var(--caramel-primary) ;
+--nav-bg-color: var(--caramel-secondary-3) ;
+--nav-padding: 2rem;
+
+--header-padding: 2rem;
+--font-color: rgba(238, 238, 238, 0.9);
+
+--p-FS: clamp(2rem, 2vw, 3.2rem);
+--p-FF:"Lato", sans-serif;
+}
+nav {
+display: flex;
+justify-content: center;
+flex-direction: row;
+font-size: var(--nav-FS);
+/* background-color: var(--nav-bg-color); */
+font-family: var(--nav-FF);
+padding-top: var(--nav-padding);
+}
+
+.nav-item-nav:hover {
+  transform: translateY(-10%);
+  border-bottom: 2px solid #fff;
+}
+.nav-item{
+display: inline;
+margin-left: 2rem;
+/* background-color: var(--nav-item-bg-color); */
+cursor: pointer;
+opacity: 0.8;
+}
+
+body{
+font-size: 1.6rem;
+color: #eee;
+}
+
+#shop-name{
+  font-family: var(--H1-FF);
+  font-size: var(--H1-FS);
+  text-align: center;
+  padding: var(--H1-padding);
+}
+
+header{
+  padding-top: var(--header-padding);
+  padding-bottom: var(--header-padding);
+  background-color: var(--header-bg-color);
+}
+
+
+/* .founder::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-bottom: 100%;
+  border-radius: 50%;
+} */
+
+.coffee-item {
+  margin: 2rem;
+}
+body {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.founder {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 2rem;
+  border-radius: 45%;
+  /* overflow-clip-margin: content-box;
+  overflow: clip; */
+  opacity: 0.9;
+}
+#menu-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);  /* specify 5 columns */
+  justify-items: center;
+  margin: 5rem;
+  background-color: var(--header-bg-color);
+}
+#menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));  /* specify 5 columns */
+  justify-items: center;
+}
+
+#menu-container .coffee-item {
+  min-width: 150px;
+  font-size: var(--p-FS);
+  font-family: var(--p-FF);
+}
+
+
+@media (min-width: 768px) {
+  body {
+    background-position: 50% 50%;
+  }.founder {
+    max-width: 30%;
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  body {
+    background-position: 55% 50%;
+  }
+  #menu-container {
+    grid-template-columns: repeat(5, 1fr);  /* specify 5 columns */
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-position: 60% 50%;
+  }
+}
+
+.active{
+    border-bottom: 2px solid var(--font-color);
+    opacity: 1;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem;
+}
+
+#main{
+  max-width: 700px;
+  animation: fadeIn 1.5s;
+  text-align: center;
+  padding: 5rem;
+  background-color: var(--header-bg-color);
+}
+
+p{
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  font-size: var(--p-FS);
+  font-family: var(--p-FF);
+}
+
+
+footer p {
+  padding: 0;
+  text-align: center;
+}
+
+.fab.fa-github {
+  color: white;
+  font-size: 32px;
+  padding-left: 0.5rem;
+  display: inline;
+  opacity: 0.7;
+}
+.fab.fa-github:hover {
+opacity: 1;
+}
+
+footer p{
+  position: fixed;  /* position the footer at a fixed position on the page */
+  bottom: 0;  /* position the footer at the bottom of the page */
+  width: 100%;
+  background-color: var(--header-bg-color);
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+h3{
+  text-align: center;
+}
+
+img.coffee-img{
+  display: block;
+  margin: 0 auto;
+}
+
+#menu-container :nth-last-child(-n+2) {
+  /* styles go here */
+  margin-bottom: 5rem;
+}
+
+img.location{
+  width: 100%;
+}
